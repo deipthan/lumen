@@ -24,15 +24,26 @@ When you're done, close the Terminal window to stop the preview.
 2. On the empty-repo page, click **"uploading an existing file"**.
 3. Drag these files into the upload area and click **Commit changes**:
    `index.html`, the `index-*.js` and `index-*.css` files,
-   `portrait-*.jpg`, and `.nojekyll`. (`README.md` and
-   `Preview Lumen.command` are for you — no need to upload them, though
-   it's harmless if you do.) The build is flat on purpose — there are no
-   subfolders to preserve, so a simple file drag always works.
+   `portrait-*.jpg`, `robots.txt`, `sitemap.xml`, `CNAME`, and
+   `.nojekyll`. (`README.md` and `Preview Lumen.command` are for you —
+   no need to upload them, though it's harmless if you do.) The build is
+   flat on purpose — there are no subfolders to preserve, so a simple
+   file drag always works.
 4. In the repo, go to **Settings → Pages**.
 5. Under "Build and deployment", set Source to **Deploy from a branch**,
    choose branch **main** and folder **/ (root)**, then **Save**.
-6. Wait ~1 minute. Your site is live at:
-   **https://YOUR-USERNAME.github.io/lumen/**
+6. Wait ~1 minute. The site is live at **https://yourlumen.net** (custom
+   domain, configured in Settings → Pages; the `CNAME` file in this
+   package keeps that setting safe across re-uploads).
+
+## Getting found on Google
+
+The package includes `robots.txt`, `sitemap.xml`, and a canonical tag
+pointing at https://yourlumen.net. After each deploy of significant new
+content, go to Google Search Console (https://search.google.com/search-console),
+open the yourlumen.net property, and use **URL Inspection → Request
+Indexing**. New sites can take days to weeks to appear in results;
+Search Console → Pages shows current indexing status.
 
 ## Notes
 
